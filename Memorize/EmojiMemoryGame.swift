@@ -12,7 +12,7 @@ func createCardContent(pairIndex: Int) -> String {
 }
 
 class EmojiMemoryGame: ObservableObject {
-    private var model: MemoryGame<String> = EmojiMemoryGame.createMemoryGame()
+    @Published private var model: MemoryGame<String> = EmojiMemoryGame.createMemoryGame()
 
     static func createMemoryGame() -> MemoryGame<String> {
         let emojis = "🥶😱😨😰😥😓🤗🤔🤭🤫🤥😶😐😑😬🙄😯😦".map{String($0)}
@@ -29,7 +29,6 @@ class EmojiMemoryGame: ObservableObject {
     // MARK: - Intents(s)
 
     func choose(card: MemoryGame<String>.Card) {
-        objectWillChange.send()
         model.choose(card: card)
     }
 }
