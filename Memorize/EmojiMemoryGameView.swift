@@ -37,7 +37,7 @@ struct CardView: View {
                     RoundedRectangle(cornerRadius: cornerRadius).fill()
                 }
             }
-            .font(Font.system(size: min(geometry.size.width, geometry.size.height) * fontScaleFactor))
+            .font(Font.system(size: fontSize(for: geometry)))
         }
     }
 
@@ -45,7 +45,9 @@ struct CardView: View {
 
     let cornerRadius: CGFloat = 10
     let edgeLineWidth: CGFloat = 3
-    let fontScaleFactor: CGFloat = 0.75
+    func fontSize(for geometry: GeometryProxy) -> CGFloat {
+        min(geometry.size.width, geometry.size.height) * 0.75
+    }
 }
 
 struct ContentView_Previews: PreviewProvider {
