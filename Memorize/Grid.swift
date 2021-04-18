@@ -29,12 +29,12 @@ struct Grid<Item, ItemView>: View where Item: Identifiable, ItemView: View {
     }
 
     private func extractedFunc(for item: Item, in layout: GridLayout) -> some View {
-        let index = self.index(of: item)
+        let index = self.index(of: item)!
         return viewForItem(item).frame(width: layout.itemSize.width, height: layout.itemSize.height)
             .position(layout.location(ofItemAt: index))
     }
 
-    private func index(of item: Item) -> Int {
-        return items.firstIndex(where: {$0.id == item.id}) ?? 0
+    private func index(of item: Item) -> Int? {
+        return items.firstIndex(where: { $0.id == item.id })
     }
 }
