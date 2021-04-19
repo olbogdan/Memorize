@@ -15,6 +15,7 @@
 		682243E52625C94200DAB9FF /* MemoryGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 682243E42625C94200DAB9FF /* MemoryGame.swift */; };
 		682243E82625E60800DAB9FF /* EmojiMemoryGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 682243E72625E60800DAB9FF /* EmojiMemoryGame.swift */; };
 		684A1822262C84780094B858 /* GridLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 684A1821262C84780094B858 /* GridLayout.swift */; };
+		68E72723262E2D12004D4A63 /* Pie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68E72722262E2D12004D4A63 /* Pie.swift */; };
 		68EC04CF262A49A800158334 /* Grid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68EC04CE262A49A800158334 /* Grid.swift */; };
 /* End PBXBuildFile section */
 
@@ -29,6 +30,7 @@
 		682243E42625C94200DAB9FF /* MemoryGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryGame.swift; sourceTree = "<group>"; };
 		682243E72625E60800DAB9FF /* EmojiMemoryGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiMemoryGame.swift; sourceTree = "<group>"; };
 		684A1821262C84780094B858 /* GridLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridLayout.swift; sourceTree = "<group>"; };
+		68E72722262E2D12004D4A63 /* Pie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pie.swift; sourceTree = "<group>"; };
 		68EC04CE262A49A800158334 /* Grid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Grid.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -72,6 +74,7 @@
 				68EC04CE262A49A800158334 /* Grid.swift */,
 				684A1821262C84780094B858 /* GridLayout.swift */,
 				680BA62E262D91B400C6CB03 /* Array+Only.swift */,
+				68E72722262E2D12004D4A63 /* Pie.swift */,
 			);
 			path = Memorize;
 			sourceTree = "<group>";
@@ -155,6 +158,7 @@
 			files = (
 				682243E52625C94200DAB9FF /* MemoryGame.swift in Sources */,
 				682243D72625B57800DAB9FF /* EmojiMemoryGameView.swift in Sources */,
+				68E72723262E2D12004D4A63 /* Pie.swift in Sources */,
 				682243D52625B57800DAB9FF /* MemorizeApp.swift in Sources */,
 				684A1822262C84780094B858 /* GridLayout.swift in Sources */,
 				68EC04CF262A49A800158334 /* Grid.swift in Sources */,
