@@ -15,7 +15,9 @@ struct EmojiMemoryGameView: View {
             Grid(viewModel.cards) { card in
                 CardView(card: card)
                     .onTapGesture {
-                        viewModel.choose(card: card)
+                        withAnimation(.linear(duration: 1)) {
+                            viewModel.choose(card: card)
+                        }
                     }
                     .padding(5)
             }
@@ -50,7 +52,10 @@ struct CardView: View {
                     clockwise: true)
                     .padding(5)
                     .opacity(0.4)
-                Text(card.content).font(Font.system(size: fontSize(for: size)))
+                Text(card.content)
+                    .font(Font.system(size: fontSize(for: size)))
+                    .rotationEffect(Angle.degrees(card.isMatched ? 360 : 0))
+                    .animation(Animation.linear(duration: 1).repeatForever(autoreverses: false))
             }
             .cardify(isFaceUp: card.isFaceUp)
         }
