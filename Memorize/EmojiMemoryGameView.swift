@@ -11,7 +11,7 @@ struct EmojiMemoryGameView: View {
     @ObservedObject var viewModel: EmojiMemoryGame
 
     var body: some View {
-        return
+        return VStack {
             Grid(viewModel.cards) { card in
                 CardView(card: card)
                     .onTapGesture {
@@ -21,6 +21,14 @@ struct EmojiMemoryGameView: View {
             }
             .padding()
             .foregroundColor(Color.orange)
+            Button(action: {
+                withAnimation(.easeInOut) {
+                    self.viewModel.resetGame()
+                }
+            }, label: {
+                Text("New Game")
+            })
+        }
     }
 }
 
